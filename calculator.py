@@ -1,10 +1,10 @@
 import math
 
-def start():
+def start_calculator():
     print('''
-    ================
-    Area Calculator
-    ================
+    ==================
+    Area Calculator 📐
+    ==================
         
         1) Triangle
         2) Rectangle
@@ -13,40 +13,41 @@ def start():
         5) Quit
     ''')
 
-def area_triangle():
-    base = float(input('Base: '))
-    height = float(input('Height: '))
+def calculate_area_triangle():
+    base = float(input('Base (m): '))
+    height = float(input('Height (m): '))
     area = (base * height) / 2
-    print(f'The area is {area}')
+    print(f'The area of the triangle with base {base}m and height {height}m is {area}m²')
 
-def area_rectangle():
-    length = float(input('Length: '))
-    width = float(input('Width: '))
+def calculate_area_rectangle():
+    length = float(input('Length (m): '))
+    width = float(input('Width (m): '))
     area = (length * width) / 2
-    print(f'The area is {area}')
+    print(f'The area of the rectangle with length {length}m and width {width}m is {area}m²')
 
-def area_square():
-    side = float(input('Side: '))
+def calculate_area_square():
+    side = float(input('Side (m): '))
     area = math.pow(side, 2)
-    print(f'The area is {area}')
+    print(f'The area of the square with sides {side}m is {area}m²')
 
-def area_circle():
-    radius = float(input('Radius: '))
+def calculate_area_circle():
+    radius = float(input('Radius (m): '))
     area = math.pi * math.pow(radius, 2)
-    print(f'The area is {area}')
+    print(f'The area of the square with radius {radius}m is {area:.2f}m²')
 
 while True:
-    start()
+    start_calculator()
     user_input = int(input('Which shape: '))
     if user_input == 1:
-        area_triangle()
+        calculate_area_triangle()
     elif user_input == 2:
-        area_rectangle()
+        calculate_area_rectangle()
     elif user_input == 3:
-        area_square()
+        calculate_area_square()
     elif user_input == 4:
-        area_circle()
+        calculate_area_circle()
     elif user_input == 5:
+        print('Bye bye.👋')
         break
     else:
         print('Wrong input please select one of the options below')
