@@ -22,7 +22,7 @@ def calculate_area_triangle():
 def calculate_area_rectangle():
     length = float(input('Length (m): '))
     width = float(input('Width (m): '))
-    area = (length * width) / 2
+    area = (length * width)
     print(f'The area of the rectangle with length {length}m and width {width}m is {area}m²')
 
 def calculate_area_square():
